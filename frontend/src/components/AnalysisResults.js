@@ -9,10 +9,7 @@ import {
   Alert,
 } from '@mui/material';
 import {
-  School as SchoolIcon,
-  Work as WorkIcon,
   Star as StarIcon,
-  EmojiEvents as CertIcon,
 } from '@mui/icons-material';
 
 const AnalysisResults = ({ results, loading, error }) => {

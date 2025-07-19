@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Typography, Box, LinearProgress, Avatar, Fade } from '@mui/material';
+import { Card, Typography, LinearProgress, Avatar, Fade } from '@mui/material';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import CelebrationIcon from '@mui/icons-material/Celebration';
 

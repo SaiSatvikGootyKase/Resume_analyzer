@@ -1,7 +1,5 @@
 import React, { useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { Box, Paper, Typography, CircularProgress } from '@mui/material';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import axios from 'axios';
 
 const ResumeUpload = ({ onAnalysisComplete, onError, setLoading }) => {
@@ -31,7 +29,7 @@ const ResumeUpload = ({ onAnalysisComplete, onError, setLoading }) => {
     }
   }, [onAnalysisComplete, onError, setLoading]);
 
-  const { getRootProps, getInputProps, isDragActive } = useDropzone({
+  const { getRootProps, getInputProps } = useDropzone({
     onDrop,
     accept: {
       'application/pdf': ['.pdf'],
