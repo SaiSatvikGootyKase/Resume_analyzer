@@ -1,0 +1,152 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Global Styles */
+:root {
+  --primary-gradient: linear-gradient(135deg, #000000 0%, #000000 100%);
+  --secondary-gradient: linear-gradient(135deg, #3b82f6 0%, #2dd4bf 100%);
+  --background-gradient: linear-gradient(120deg, #73c7fa 0%, #ffffff 100%);
+  --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: var(--background-gradient);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+/* Animated Background */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Main Container Styles */
+.startup-card {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: var(--box-shadow);
+  backdrop-filter: blur(10px);
+  transition: var(--transition);
+}
+
+.startup-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Typography */
+.heading-serif {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Upload Area Styles */
+.upload-area {
+  border: 2px dashed #6366f1;
+  border-radius: 15px;
+  padding: 3rem 2rem;
+  text-align: center;
+  background: rgba(99, 102, 241, 0.05);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.upload-area:hover {
+  transform: scale(1.02);
+  border-color: #8b5cf6;
+  background: rgba(99, 102, 241, 0.1);
+}
+
+.upload-message {
+  font-size: 1.2rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.upload-note {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+/* Results Container Styles */
+.results-container {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Score Bar Animation */
+.score-bar {
+  height: 8px;
+  border-radius: 4px;
+  background: var(--secondary-gradient);
+  transition: width 1.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Material-UI Component Overrides */
+.MuiPaper-root {
+  border-radius: 15px !important;
+  transition: var(--transition) !important;
+}
+
+.MuiPaper-root:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--box-shadow) !important;
+}
+
+.MuiTypography-h3 {
+  font-family: 'Poppins', sans-serif !important;
+  font-weight: 700 !important;
+}
+
+.MuiTypography-h4, .MuiTypography-h5, .MuiTypography-h6 {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+.MuiChip-root {
+  border-radius: 8px !important;
+  transition: var(--transition) !important;
+}
+
+.MuiChip-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .startup-card {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .heading-serif {
+    font-size: 2rem;
+  }
+
+  .upload-area {
+    padding: 2rem 1rem;
+  }
+} 

@@ -1,0 +1,41 @@
+# === Python cache & compiled files ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# === Virtual Environments ===
+venv/
+venv311/
+
+# === Environment Secrets ===
+.env
+
+# === OS-generated files ===
+.DS_Store
+Thumbs.db
+
+# === Editor/IDE folders ===
+.vscode/
+
+# === Log files ===
+*.log
+
+# === Node.js - Frontend (if applicable) ===
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+
+# === Python egg files ===
+*.egg-info/
+.eggs/
+
+# === macOS Spotlight files ===
+*.Spotlight-V100
+
+# === Windows Thumbs.db ===
+*.Thumbs.db
+
+# === Backup files ===
+*.bak
+*.swp
