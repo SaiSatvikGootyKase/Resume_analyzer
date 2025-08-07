@@ -36,9 +36,14 @@ app.add_middleware(
 try:
     nlp = spacy.load("en_core_web_sm")
 except OSError:
-    print("Downloading SpaCy model...")
-    spacy.cli.download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
+    try:
+        print("Downloading SpaCy model...")
+        spacy.cli.download("en_core_web_sm")
+        nlp = spacy.load("en_core_web_sm")
+    except Exception as e:
+        print(f"Error loading SpaCy model: {e}")
+        # Create a minimal fallback
+        nlp = None
 
 class ResumeAnalysis(BaseModel):
     skills: List[str]
